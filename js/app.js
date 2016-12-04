@@ -9,6 +9,7 @@ angular.module('starter', ['ionic'])
   $ionicPlatform.ready(function() {
 
     var pushNotification = window.plugins.pushNotification;
+    
     pushNotification.register(
       onNotification,
       errorHandler,
@@ -17,7 +18,8 @@ angular.module('starter', ['ionic'])
         'sound': 'true',
         'alert': 'true',
         'ecb': 'onNotification',
-        'senderID': 'ionic-gcm-151514',
+        'senderID': '40411004174',
+        //'senderID': 'ionic-gcm-151514',
         //'senderID': 'YOUR GOOGLE CONSOLE PROJECT NUMBER',
       }
     );
@@ -37,7 +39,7 @@ angular.module('starter', ['ionic'])
     }
 
     window.onNotification = function(e){
-
+      alert("On Notification");
       switch(e.event){
         case 'registered':
           alert("Registrado");
