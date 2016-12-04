@@ -40,6 +40,7 @@ angular.module('starter', ['ionic'])
 
       switch(e.event){
         case 'registered':
+          alert("Registrado");
           if(e.regid.length > 0){
 
             var device_token = e.regid;
